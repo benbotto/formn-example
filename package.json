@@ -1,6 +1,6 @@
 {
   "name": "formn-example",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Examples repository for formn.",
   "main": "dist/index.js",
   "author": "Ben Botto",
@@ -8,7 +8,7 @@
   "dependencies": {
     "@types/mysql2": "types/mysql2",
     "@types/node": "~10.12.12",
-    "formn": "~5.0.0",
+    "formn": "~5.1.0",
     "formn-cli": "~1.0.0",
     "mysql2": "~1.6.4",
     "ts-node": "~7.0.1"

@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@types/mysql2@types/mysql2":
+"@types/mysql2@github:types/mysql2", "@types/mysql2@types/mysql2":
   version "1.0.0"
   resolved "https://codeload.github.com/types/mysql2/tar.gz/e2be194d8db7a1a64612e5f645d5cad8223328ab"
   dependencies:
@@ -162,6 +162,18 @@ formn-cli@~1.0.0:
 formn@~5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/formn/-/formn-5.0.0.tgz#3c77e4876684018f725a4adfdc2f5f1ccd06d264"
+  dependencies:
+    "@types/mysql2" types/mysql2
+    "@types/pluralize" "~0.0.29"
+    change-case "~3.0.2"
+    mysql2 "~1.6.4"
+    pluralize "~7.0.0"
+    reflect-metadata "~0.1.12"
+    typescript "~3.1.6"
+
+formn@~5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/formn/-/formn-5.1.0.tgz#a425929bcfec7dd6c6ecb391ff723af22e42f3de"
   dependencies:
     "@types/mysql2" types/mysql2
     "@types/pluralize" "~0.0.29"

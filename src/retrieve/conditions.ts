@@ -1,6 +1,6 @@
 import { inspect } from 'util';
 
-import { MySQLDataContext, ConnectionOptions, Select } from 'formn';
+import { MySQLDataContext, ConnectionOptions, Select, ConditionBuilder } from 'formn';
 
 import { Person } from '../entity/person.entity';
 
@@ -11,27 +11,20 @@ async function main() {
   try {
     await dataContext.connect(connOpts);
 
+    // The ConditionBuilder class is used to build WHERE or ON conditions.
+    const cb = new ConditionBuilder();
+
     // People with a "j" and an "r" in their name, like Jenny Mather.
     const query: Select<Person> = dataContext
       .from(Person, 'p')
       .where(
-        {
-          $and: [
-            {
-              $or: [
-                {$like: {'p.firstName': ':letter1'}},
-                {$like: {'p.lastName': ':letter1'}}
-              ]
-            },
-            {
-              $or: [
-                {$like: {'p.firstName': ':letter2'}},
-                {$like: {'p.lastName': ':letter2'}}
-              ]
-            }
-          ]
-        },
-        {letter1: '%j%', letter2: '%r'})
+        cb.and(
+          cb.or(
+            cb.like('p.firstName', ':letter1', '%j%'),
+            cb.like('p.lastName', ':letter1', '%j%')),
+          cb.or(
+            cb.like('p.firstName', ':letter2', '%r%'),
+            cb.like('p.lastName', ':letter2', '%r%'))))
       .select();
 
     console.log(query.toString());

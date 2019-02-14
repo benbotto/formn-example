@@ -1,7 +1,5 @@
-import { inspect } from 'util';
-
 import {
-  MySQLDataContext, ConnectionOptions, ConditionBuilder, UpdateModel
+  MySQLDataContext, ConnectionOptions, UpdateModel
 } from 'formn';
 
 import { Person } from '../entity/person.entity';

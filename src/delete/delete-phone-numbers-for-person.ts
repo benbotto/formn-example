@@ -31,7 +31,7 @@ async function main() {
 
     console.log(query.toString());
 
-    // The result will have at least a affectedRows property.
+    // The result will have at least an affectedRows property.
     const result: MutateResultType = await query.execute();
 
     console.log(inspect(result, {depth: null, compact: false}));

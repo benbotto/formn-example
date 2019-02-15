@@ -1,7 +1,7 @@
 {
   "name": "formn-example",
-  "version": "1.12.0",
-  "description": "Examples repository for formn.",
+  "version": "1.13.0",
+  "description": "Examples repository for Formn.",
   "main": "dist/index.js",
   "author": "Ben Botto",
   "license": "MIT",

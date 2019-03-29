@@ -1,3 +1,5 @@
+import { Validate, PhoneValidator } from 'bsy-validation';
+
 import { Table, Column, ManyToOne } from 'formn';
 
 import { Person } from './person.entity';
@@ -8,6 +10,7 @@ export class PhoneNumber {
   personId: number;
 
   @Column({isNullable: false, maxLength: 255, sqlDataType: 'varchar'})
+  @Validate(new PhoneValidator())
   phoneNumber: string;
 
   @Column({name: 'phoneNumberID', isPrimary: true, isGenerated: true, isNullable: false, sqlDataType: 'int'})

@@ -50,7 +50,7 @@ bsy-error@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/bsy-error/-/bsy-error-2.0.0.tgz#193207e26734981db6dcc49316978bc87a40bce8"
 
-bsy-validation@~2.3.1:
+bsy-validation@2.x.x, bsy-validation@~2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/bsy-validation/-/bsy-validation-2.3.1.tgz#0d0c9c2be4a75018aff131a14c4011fdeb1320d8"
   dependencies:
@@ -190,12 +190,13 @@ formn@~5.0.0:
     reflect-metadata "~0.1.12"
     typescript "~3.1.6"
 
-formn@~5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/formn/-/formn-5.1.0.tgz#a425929bcfec7dd6c6ecb391ff723af22e42f3de"
+formn@~5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/formn/-/formn-5.5.0.tgz#77821e7da9e6e736e1440662a72fa8fbcb4f0fab"
   dependencies:
     "@types/mysql2" types/mysql2
     "@types/pluralize" "~0.0.29"
+    bsy-validation "2.x.x"
     change-case "~3.0.2"
     mysql2 "~1.6.4"
     pluralize "~7.0.0"

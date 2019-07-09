@@ -2,7 +2,7 @@
 
 const people = [
   {firstName: 'Joe', lastName: 'Shmo'},
-  {firstName: 'Rand', lastName: 'AlThore'},
+  {firstName: 'Rand', lastName: 'al\'Thor'},
   {firstName: 'Holly', lastName: 'Davis'},
   {firstName: 'Jenny', lastName: 'Mather'},
 ];

@@ -19,14 +19,14 @@ async function main() {
     const cb = new ConditionBuilder();
 
     // Delete all PhoneNumber (pn) records for the Person (p) named
-    // "Rand Althore."
+    // "Rand al'Thor."
     const query: Delete = dataContext
       .from(PhoneNumber, 'pn')
       .innerJoin(Person, 'p', 'pn.person')
       .where(
         cb.and(
           cb.eq('p.firstName', ':fname', 'Rand'),
-          cb.eq('p.lastName', ':lname', 'AlThore')))
+          cb.eq('p.lastName', ':lname', 'al\'Thor')))
       .delete('pn');
 
     console.log(query.toString());

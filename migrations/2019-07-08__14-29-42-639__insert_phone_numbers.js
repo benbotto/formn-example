@@ -12,7 +12,7 @@ const people = [
   },
   {
     firstName: 'Rand',
-    lastName: 'AlThore',
+    lastName: 'al\'Thor',
     phoneNumbers: [
       {phoneNumber: '666-451-4412', type: 'mobile'}
     ]
